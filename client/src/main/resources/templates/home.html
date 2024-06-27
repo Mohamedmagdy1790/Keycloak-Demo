@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+    <head>
+        <meta charset="ISO-8859-1">
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/bugtracker.css">
+        <script src="/js/bootstrap.min.js"></script>
+        <title>Bug Tracker v1.0</title>
+    </head>
+
+    <body>
+        <div class='container-fluid'>
+
+            <!-- The header with project name and logout link -->
+            <div class="row bugtracker-header">
+                <div class="col">
+                    <h2>
+                        test
+                    </h2>
+                </div>
+
+                <div class="col d-flex flex-row-reverse bd-highlight">
+                    <div class="p-2 bd-highlight">
+                        <a href="/logout" style="color:white">Logout</a>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <img th:src="${user.picture == null} ? '/images/person.svg' : ${user.picture}"
+                             class="img-circle" width="35" height="35">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ms-1 mt-4">
+
+                <!-- Show some of the User Information -->
+                <div class="col-lg-5">
+
+                    <table class="table table-striped table-bordered">
+
+                        <thead>
+                            <tr class="table-primary">
+                                <th>Attribute</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Preferred Username</td>
+                                <td><label th:text="${user.preferredUsername}"/></td>
+                            </tr>
+
+                            <tr>
+                                <td>First Name</td>
+                                <td><label th:text="${user.givenName}"/></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name</td>
+                                <td><label th:text="${user.familyName}"/></td>
+                            </tr>
+
+                            <tr>
+                                <td>Email</td>
+                                <td><label th:text="${user.email}"/></td>
+                            </tr>
+
+                            <tr>
+                                <td>Authorities</td>
+                                <td><label th:text="${user.authorities}"/></td>
+                            </tr>
+
+                            <tr>
+                                <td>Subject</td>
+                                <td><label th:text="${user.subject}" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+
+
+            </div>
+
+            <div th:text="${flightdata}">  </div>
+
+        </div>
+    </body>
+</html>
