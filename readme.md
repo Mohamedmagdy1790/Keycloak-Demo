@@ -18,6 +18,11 @@ The demo provides a practical implementation of authenticating and authorizing u
  - using modular approach where i have two modules inside the main app
 ![img_3.png](pictures/img_3.png)
 
+## prerequisites
+
+- make sure you have docker installed in your machine
+
+
 # Getting Started
 
 1. Run docker compose file `docker compose -up`
