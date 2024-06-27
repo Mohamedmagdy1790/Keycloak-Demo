@@ -1,5 +1,14 @@
 
-# Archetecture 
+# Keycloak Demo: Authorization Code with PKCE
+This repository contains a demo illustrating the concepts learned from a course on Keycloak, focusing on the Authorization Code with PKCE (Proof Key for Code Exchange) flow. The project consists of two main modules:
+
+- Client Application: This module handles user authentication via Keycloak, acting as the Identity Management System (IMS). It initiates the authorization code flow with PKCE to ensure secure authentication.
+
+- Resource Server API: This module serves as the resource server, responsible for verifying tokens issued by Keycloak and authorizing access to protected resources based on the validated tokens.
+
+The demo provides a practical implementation of authenticating and authorizing users with Keycloak, showcasing how to securely manage access tokens and integrate them into a client-server architecture.
+
+# Architecture 
 
 - we are using authorization code with pkce grant type to get the access token
 - there are two services client app and resource server (api)
