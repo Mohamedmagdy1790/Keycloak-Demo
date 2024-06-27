@@ -18,7 +18,7 @@ The demo provides a practical implementation of authenticating and authorizing u
  - using modular approach where i have two modules inside the main app
 ![img_3.png](pictures/img_3.png)
 
-## prerequisites
+## Prerequisites
 
 - make sure you have docker installed in your machine
 
@@ -37,6 +37,9 @@ The demo provides a practical implementation of authenticating and authorizing u
 10. Add mapper specifc info ![img_1.png](pictures/img_1.png)
 11. Run two applications
 12. To test app go to `localhost:8080/api/auth/flight`
+
+## Important Notes
+- dont forget to add client  secret you get from keyclock to application.propreties file
 
 
 # technology stack 
